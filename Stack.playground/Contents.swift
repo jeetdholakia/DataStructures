@@ -28,3 +28,22 @@ class Node<Element> {
         self.value = value
     }
 }
+
+struct User {
+    let name: String?
+    let username: String?
+}
+
+let me = User(name: "Jeet", username: "jj@jj")
+let you = User(name: "you", username: "uu@uu")
+
+let userStack = Stack<User>()
+
+userStack.push(me)
+userStack.push(you)
+userStack.peek()
+
+let firstUserPop = userStack.pop()
+print("First user popped: \(firstUserPop?.name ?? "")")
+
+
